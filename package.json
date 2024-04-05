@@ -1,0 +1,18 @@
+{
+	"dependencies": {
+		"@iconify/json": "^2.2.190",
+		"daisyui": "^4.7.3",
+		"purgecss": "^5.0.0",
+		"tailwindcss": "^3.4.1"
+	},
+	"type": "module",
+	"scripts": {
+		"dev": "npx tailwindcss -m -i ./assets/tailwind.css -o ./assets/style.css --watch",
+		"build": "node build main"
+	},
+	"devDependencies": {
+		"@iconify/tailwind": "^0.1.4",
+		"@tailwindcss/typography": "^0.5.10",
+		"async": "^3.2.5"
+	}
+}
