@@ -27,11 +27,9 @@ const SplitAnimation = (prod) => {
 	splitText[1].lines.forEach((e, idx) => {
 		e.forEach((ee, idx2) => {
 			console.log(idx, idx2);
-			ee.style.animation = null;
-			ee.classList.add("!animate-none");
-			ee.dataset.aos = "fade-up";
-			// ee.dataset.aosEasing = "ease-out-back";
-			ee.style.transitionDelay = idx2 * 0.05 + "s";
+			ee.dataset.aosAnchor = "#beranda";
+			ee.dataset.aos = "fade-blur-up";
+			ee.dataset.aosDelay = 500 + Math.floor(idx * 0.05 * 1000);
 		});
 	});
 	let frameTime = 0;
@@ -87,7 +85,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 		},
 	});
 
-	SplitAnimation(true);
+	SplitAnimation(false);
 	if (window.scrollY > 0) {
 		document.querySelector(".navbar").classList.add("py-4", "shadow-md");
 	} else {
