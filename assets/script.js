@@ -1,6 +1,5 @@
-// document.querySelectorAll("*").forEach((e) => {
-// 	e.style.outline = "grey 1px solid";
-// });
+const DEBUG = false;
+// const DEBUG = true;
 window.mobileAndTabletCheck = function () {
 	let check = false;
 	(function (a) {
@@ -17,7 +16,7 @@ const SplitAnimation = (prod) => {
 	}
 	console.log(splitText);
 	splitText[0].words.forEach((e, idx) => {
-		e.classList.add("overflow-hidden", "py-2");
+		e.classList.add("overflow-hidden", "py-2", "hero-text");
 	});
 	splitText[0].chars.forEach((e, idx) => {
 		e.dataset.aos = "fade-blur-up";
@@ -85,7 +84,19 @@ document.addEventListener("DOMContentLoaded", (e) => {
 		},
 	});
 
-	SplitAnimation(false);
+	SplitAnimation(true);
+	document.querySelectorAll(".splide").forEach((e) => {
+		var splide = new Splide(e, {
+			type: "loop",
+			autoplay: true,
+			resetProgress: false,
+			drag: "free",
+			snap: true,
+			perPage: 1,
+		});
+
+		splide.mount();
+	});
 	if (window.scrollY > 0) {
 		document.querySelector(".navbar").classList.add("py-4", "shadow-md");
 	} else {

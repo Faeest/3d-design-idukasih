@@ -90,9 +90,38 @@ body[data-aos-easing="ease-out-back"] [data-aos] {
 }
 
 @layer components {
+	.bg-random {
+		@apply relative;
+	}
+	.bg-random::before {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.6;
+		@apply bg-[url(https://source.unsplash.com/random/1600x900/?dark,night,city)];
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: cover;
+
+		content: " ";
+	}
+	canvas {
+		@apply hover:outline-2 hover:outline-primary dark:hover:outline-accent transition-all;
+	}
+	.hero-text {
+		@apply drop-shadow-[0px_0px_0px_oklch(var(--p)/1)] hover:drop-shadow-[5px_5px_0px_oklch(var(--p)/1)] dark:drop-shadow-[0px_0px_0px_oklch(var(--p)/0.5)] dark:hover:drop-shadow-[4px_4px_0px_oklch(var(--p)/0.5)] hover:-translate-x-1 hover:-translate-y-1 transition-all ease-in cursor-pointer;
+	}
 	.effect-3d {
 		box-shadow: 6px 6px oklch(var(--bc));
 		@apply outline-base-content;
+	}
+	.card-4 {
+		@apply card min-w-[200px] w-full grow shadow glass;
+		background-image: linear-gradient(135deg, oklch(var(--glass-color) / var(--glass-opacity, 30%)) 0%, rgb(0 0 0 / var(--glass-opacity-2, 0%)) 100%), linear-gradient(var(--glass-reflex-degree, 100deg), oklch(var(--glass-color) / var(--glass-reflex-opacity, 10%)) 25%, rgb(0 0 0 / 0%) 25%);
+		@apply [--glass-color:var(--b1)] [--glass-opacity:50%] [--glass-opacity-2:20%] [--glass-reflex-opacity:30%];
 	}
 	.card-3-title {
 		@apply w-full gap-2 flex sm:flex-col-reverse justify-between sm:justify-start;
@@ -101,7 +130,7 @@ body[data-aos-easing="ease-out-back"] [data-aos] {
 		@apply sm:w-1/3 shadow flex min-w-56 w-full sm:max-w-sm flex-col grow rounded p-5 gap-2;
 	}
 	.card-2 {
-		@apply card sm:w-1/4 sm:max-w-[285px] min-w-[200px] w-full grow bg-base-content/5 shadow outline outline-1 outline-base-content/10;
+		@apply card sm:w-1/4 sm:max-w-[285px] min-w-[200px] w-full grow bg-base-content/5 shadow outline outline-1 dark:outline-base-content/10 outline-base-content/15;
 	}
 	@keyframes slide-in {
 		from {
@@ -119,7 +148,7 @@ body[data-aos-easing="ease-out-back"] [data-aos] {
 		@apply btn btn-ghost aria-selected:text-neutral-900 dark:aria-selected:text-neutral-100 aria-selected:bg-slate-950/20 dark:aria-selected:bg-slate-50/10 aria-selected:font-semibold font-medium rounded-sm;
 	}
 	.nav-links {
-		@apply base-links lg:text-sm text-base;
+		@apply base-links lg:text-sm text-base rounded;
 	}
 	.drawer-links {
 		@apply base-links m-0 w-full justify-start lg:text-sm text-base;
