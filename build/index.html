@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta name="description" content="idukasih 3D" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+		<title>title</title>
+		<link rel="stylesheet" href="./assets/aos.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./assets/splitting.css" />
+		<link rel="stylesheet" href="./assets/splitting-cells.css" />
+		<link rel="stylesheet" href="./assets/marquee.css" />
+		<link rel="stylesheet" href="./assets/splide.min.css" />
+		<link rel="stylesheet" href="./assets/splide-core.min.css" />
+		<link rel="stylesheet" href="./assets/style.css" />
+	</head>
+	<body>
+		<div id="loading" class="fixed bg-base-300 top-0 left-0 right-0 bottom-0 z-[99999] gap-5 sm:text-6xl text-4xl flex flex-col justify-center items-center">
+			<span class="loading loading-spinner w-20"></span>
+			<span class="font-semibold">Loading</span>
+		</div>
+		<div class="drawer">
+			<input id="sidebar-nav" type="checkbox" class="drawer-toggle" />
+			<div class="drawer-content flex flex-col gap-0">
+				<!-- Navbar -->
+				<div class="w-full transition-all z-[1000] navbar justify-center lg:px-20 md:px-10 sticky top-0 bg-base-100/75 backdrop-blur-lg">
+					<div class="container flex">
+						<div class="navbar-start">
+							<div class="text-xl btn btn-ghost no-animation rounded-sm px-5">Title</div>
+						</div>
+						<div class="flex-nones navbar-end items-center flex gap-2">
+							<a aria-label="nav-link" href="#beranda" class="nav-links max-lg:hidden"><span class="text-2xl icon-[ic--round-home] lg:hidden"></span>Beranda</a>
+							<a aria-label="nav-link" href="#section2" class="nav-links max-lg:hidden"><span class="text-2xl icon-[iconoir--book-solid] lg:hidden"></span>section2</a>
+							<a aria-label="nav-link" href="#section3" class="nav-links max-lg:hidden"><span class="text-2xl icon-[ic--person] lg:hidden"></span>section3</a>
+							<a aria-label="nav-link" href="#section4" class="nav-links max-lg:hidden"><span class="text-2xl icon-[ic--person] lg:hidden"></span>section4</a>
+							<label for="sidebar-nav" aria-label="open sidebar" class="btn btn-circle btn-ghost lg:hidden">
+								<span class="icon-[heroicons-solid--menu-alt-3] text-2xl"></span>
+							</label>
+							<label class="swap swap-rotate btn btn-ghost btn-circle">
+								<input type="checkbox" data-toggle-theme="dark,lightdim" data-act-class="ACTIVECLASS" />
+								<span class="swap-on fill-current text-2xl icon-[ph--sun-duotone]"></span>
+								<span class="swap-off fill-current text-2xl icon-[ph--moon-duotone]"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<!-- Content -->
+				<div aria-colindex="1" aria-label="content" class="mt-0" id="beranda">
+					<div class="bg-base-100 w-full overflow-hidden">
+						<div class="container-content flex flex-wrap gap-10 relative pb-20">
+							<div data-splitting class="md:font-bold font-black lg:text-8xl text-5xl w-full lg:pb-5 z-10">Lorem, ipsum dolor.</div>
+							<div class="lg:w-1/3 w-full grow flex flex-col gap-10 items-center justify-center">
+								<div class="w-full font-medium lg:text-xl text-lg z-10 flex">
+									<div data-splitting="lines" class="lg:max-w-xl w-full text-left leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, atque delectus voluptate voluptatum reiciendis accusantium laborum. Ullam minima optio commodi fuga doloribus totam necessitatibus in.</div>
+								</div>
+								<div data-aos-anchor="#sectin2" data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="1000" class="w-full font-medium text-xl flex max-lg:justify-end z-10">
+									<a href="#section2" class="btn group btn-wide flex justify-center h-fit items-center py-3 btn-outline dark:btn-accent btn-primary dark:border border-2 hover:bg-primary dark:hover:bg-accent hover:!text-base-100 text-lg font-semibold">
+										<span>Lorem.</span>
+										<span class="group-hover:animate-[bounce-2_1s_infinite] icon-[mingcute--down-fill]"></span>
+									</a>
+								</div>
+							</div>
+							<div data-aos-anchor="#beranda" data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="700" data-aos-duration="500" class="mockup-window outline outline-1 outline-base-content/20 bg-base-300 w-1/3 grow flex aspect-video">
+								<div class="flex justify-center px-4 bg-center bg-cover bg-[url(https://placehold.co/1600x900/E5E9F0/C0C4CD/png?text=Design&font=oswald)] dark:bg-[url(https://placehold.co/1600x900/191E24/353B42/png?text=Design&font=oswald)] h-full items-center md:text-8xl text-4xl font-semibold"></div>
+							</div>
+						</div>
+						<div data-aos="fade-zoom-in" class="marquee-container p-10 container-content">
+							<div class="bg-[url(https://fakeimg.pl/600x400)] opacity-60 rounded aspect-video w-60 bg-center bg-cover"></div>
+						</div>
+					</div>
+				</div>
+				<div aria-colindex="2" aria-label="content" class="mt-0" id="section2">
+					<div class="bg-gradient-to-b from-base-200 to-base-100 w-full overflow-hidden">
+						<div class="container-content flex flex-wrap gap-20 relative pb-20">
+							<div class="absolute aspect-square rounded-full bg-primary dark:bg-opacity-15 bg-opacity-45 blur-3xl top-5 sm:right-32 right-20 w-32 z-0"></div>
+							<div class="absolute aspect-square rounded-full bg-secondary dark:bg-opacity-5 bg-opacity-15 blur-3xl sm:top-12 top-40 sm:left-36 left-16 w-44 z-0"></div>
+							<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" class="stats z-[400] bg-base-content/5 max-md:stats-vertical w-full shadow overflow-hidden">
+								<div class="stat" data-aos="fade" data-aos-easing="ease-out-back" data-aos-delay="250">
+									<div class="stat-figure text-primary"><span class="icon-[ic--twotone-palette] text-5xl"></span></div>
+									<div class="stat-title">Total Likes</div>
+									<div class="stat-value text-primary">25.6K</div>
+									<div class="stat-desc">21% more than last month</div>
+								</div>
+								<div class="stat" data-aos="fade" data-aos-easing="ease-out-back" data-aos-delay="300">
+									<div class="stat-figure text-secondary"><span class="icon-[ph--lightning-duotone] text-5xl"></span></div>
+									<div class="stat-title">Page Views</div>
+									<div class="stat-value text-secondary">2.6M</div>
+									<div class="stat-desc">21% more than last month</div>
+								</div>
+								<div class="stat" data-aos="fade" data-aos-easing="ease-out-back" data-aos-delay="350">
+									<div class="stat-figure text-secondary">
+										<div class="avatar">
+											<div class="w-16 text-accent"><span class="icon-[ph--user-duotone] text-5xl"></span></div>
+										</div>
+									</div>
+									<div class="stat-value">86%</div>
+									<div class="stat-title">Tasks done</div>
+									<div class="stat-desc text-accent">31 tasks remaining</div>
+								</div>
+							</div>
+							<div class="w-full flex flex-col gap-5 relative">
+								<div data-aos="fade" data-aos-easing="ease-out-back" class="absolute aspect-square rounded-full bg-accent dark:bg-opacity-5 bg-opacity-15 blur-3xl bottom-0 right-[30%] w-60 z-0"></div>
+								<div data-aos="fade" data-aos-easing="ease-out-back" class="absolute aspect-square rounded-full bg-primary dark:bg-opacity-5 bg-opacity-15 blur-3xl bottom-0 left-[20%] w-60 z-0"></div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" class="w-full flex justify-center pb-10"><div class="divider max-w-sm w-full"></div></div>
+								<div data-splitting class="w-full text-center text-5xl font-bold">Lorem ipsum dolor</div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="250" class="w-full max-w-4xl mx-auto text-center text-xl font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusamus officiis ab! Assumenda laudantium exercitationem unde voluptate velit saepe fugiat beatae libero accusantium, temporibus, odit et aspernatur amet perferendis quaerat.</div>
+								<div class="w-full max-w-4xl mx-auto flex-wrap flex sm:flex-row flex-col gap-5 justify-center font-normal">
+									<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="0" class="card-2">
+										<div class="card-body">
+											<h2 class="card-title">Card title!</h2>
+											<div class="font-normal text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloremque?</div>
+											<div class="card-actions justify-end pt-10">
+												<button class="btn btn-outline dark:btn-accent btn-primary dark:border border-2 hover:bg-primary dark:hover:bg-accent hover:!text-base-100">Buy Now</button>
+											</div>
+										</div>
+									</div>
+									<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="50" class="card-2">
+										<div class="card-body">
+											<h2 class="card-title">Card title!</h2>
+											<div class="font-normal text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloremque?</div>
+											<div class="card-actions justify-end pt-10">
+												<button class="btn btn-outline dark:btn-accent btn-primary dark:border border-2 hover:bg-primary dark:hover:bg-accent hover:!text-base-100">Buy Now</button>
+											</div>
+										</div>
+									</div>
+									<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="100" class="card-2">
+										<div class="card-body">
+											<h2 class="card-title">Card title!</h2>
+											<div class="font-normal text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloremque?</div>
+											<div class="card-actions justify-end pt-10">
+												<button class="btn btn-outline dark:btn-accent btn-primary dark:border border-2 hover:bg-primary dark:hover:bg-accent hover:!text-base-100">Buy Now</button>
+											</div>
+										</div>
+									</div>
+									<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="0" class="card-2">
+										<div class="card-body">
+											<h2 class="card-title">Card title!</h2>
+											<div class="font-normal text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloremque?</div>
+											<div class="card-actions justify-end pt-10">
+												<button class="btn btn-outline dark:btn-accent btn-primary dark:border border-2 hover:bg-primary dark:hover:bg-accent hover:!text-base-100">Buy Now</button>
+											</div>
+										</div>
+									</div>
+									<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="50" class="card-2">
+										<div class="card-body">
+											<h2 class="card-title">Card title!</h2>
+											<div class="font-normal text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloremque?</div>
+											<div class="card-actions justify-end pt-10">
+												<button class="btn btn-outline dark:btn-accent btn-primary dark:border border-2 hover:bg-primary dark:hover:bg-accent hover:!text-base-100">Buy Now</button>
+											</div>
+										</div>
+									</div>
+									<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="100" class="card-2">
+										<div class="card-body">
+											<h2 class="card-title">Card title!</h2>
+											<div class="font-normal text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloremque?</div>
+											<div class="card-actions justify-end pt-10">
+												<button class="btn btn-outline dark:btn-accent btn-primary dark:border border-2 hover:bg-primary dark:hover:bg-accent hover:!text-base-100">Buy Now</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div aria-colindex="3" aria-label="content" class="mt-0" id="section3">
+					<div class="bg-base-200 w-full overflow-hidden">
+						<div class="container-content flex flex-wrap gap-20 relative pb-20">
+							<div class="w-full flex flex-wrap gap-5">
+								<div class="lg:w-1/3 w-full grow flex flex-col text-base font-normal gap-2">
+									<div data-aos="fade" data-aos-easing="ease-out" data-aos-anchor=".section-3-hero" data-aos-delay="600" class="md:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, iusto.</div>
+									<div data-splitting class="md:text-left font-bold text-4xl md:text-5xl section-3-hero">Lorem ipsum <span class="text-primary">adipisicing elit.</span></div>
+									<div data-aos="fade" data-aos-easing="ease-out" data-aos-anchor=".section-3-hero" data-aos-delay="700" class="md:text-left md:pe-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sapiente, quisquam alias ut cumque consectetur.</div>
+								</div>
+								<div class="divider w-full lg:hidden"></div>
+								<div data-aos="fade" data-aos-easing="ease-out" data-aos-delay="750" class="lg:w-1/3 w-full flex flex-col text-base font-normal items-center md:items-end lg:items-start gap-2">
+									<div class="md:w-fit w-full lg:text-left md:text-right text-center">Lorem ipsum dolor sit amet.</div>
+									<div class="flex text-6xl text-orange-400">
+										<span class="icon-[mdi--star-box]"></span>
+										<span class="icon-[mdi--star-box]"></span>
+										<span class="icon-[mdi--star-box]"></span>
+										<span class="icon-[mdi--star-box]"></span>
+										<span class="icon-[mdi--star-box]"></span>
+									</div>
+									<div class="md:w-fit w-full lg:text-left md:text-right text-center max-w-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quod.</div>
+								</div>
+							</div>
+							<div class="w-full flex flex-col items-center">
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" class="font-normal sm:text-2xl text-xl mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sequi aspernatur et quis labore, consectetur consequuntur quidem quod! Eos, et ab doloribus sunt eveniet illum sint quos impedit fugit excepturi deserunt, unde, voluptates consequatur necessitatibus doloremque ex ea odio cupiditate optio aliquid magni ducimus! Possimus placeat blanditiis earum minima corporis.</div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" class="btn btn-lg btn-wide btn-outline dark:btn-accent btn-primary dark:border border-2 hover:bg-primary dark:hover:bg-accent hover:!text-base-100">Lorem, ipsum.</div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" class="divider"></div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="500" id="artworkLabel" class="text-6xl text-left max-w-4xl w-full leading-normal">Art<span class="dark:text-accent text-primary">work</span></div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-anchor="#artworkLabel" data-aos-delay="800" class="w-full max-w-4xl rounded-md mx-auto outline outline-1 outline-base-content/10 shadow-lg overflow-hidden splide" role="group" aria-label="Artwork">
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide"><img src="https://placehold.co/1600x900/264653/C0C4CD/png?text=Design&font=oswald" alt="" /></li>
+											<li class="splide__slide"><img src="https://placehold.co/1600x900/e9c46a/264653/png?text=Design&font=oswald" alt="" /></li>
+											<li class="splide__slide"><img src="https://placehold.co/1600x900/e76f51/edf2f4/png?text=Design&font=oswald" alt="" /></li>
+										</ul>
+									</div>
+									<div class="splide__progress">
+										<div class="splide__progress__bar bg-primary dark:bg-accent"></div>
+									</div>
+								</div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="500" id="designLabel" class="text-6xl text-left max-w-4xl w-full leading-normal mt-20">Des<span class="dark:text-accent text-primary">ign</span></div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-anchor="#designLabel" data-aos-delay="800" class="w-full *:mx-auto *:rounded-md *:outline *:outline-1 *:outline-base-content/20 *:bg-base-300 *:overflow-hidden" id="3d-container"></div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-delay="500" id="outcomeLabel" class="text-6xl text-left max-w-4xl w-full leading-normal mt-20">Out<span class="dark:text-accent text-primary">come</span></div>
+								<div data-aos="fade-blur-up" data-aos-easing="ease-out-back" data-aos-anchor="#outcomeLabel" data-aos-delay="800" class="w-full max-w-4xl rounded-md mx-auto outline outline-1 outline-base-content/10 shadow-lg overflow-hidden splide" role="group" aria-label="Outcome">
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide"><img src="https://placehold.co/1600x900/264653/C0C4CD/png?text=Printed&font=oswald" alt="" /></li>
+											<li class="splide__slide"><img src="https://placehold.co/1600x900/e9c46a/264653/png?text=Printed&font=oswald" alt="" /></li>
+											<li class="splide__slide"><img src="https://placehold.co/1600x900/e76f51/edf2f4/png?text=Printed&font=oswald" alt="" /></li>
+										</ul>
+									</div>
+									<div class="splide__progress">
+										<div class="splide__progress__bar bg-primary dark:bg-accent"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div aria-colindex="4" aria-label="content" class="mt-0" id="section4">
+					<div class="bg-random bg-cover bg-no-repeat bg-opacity-50 w-full overflow-hidden">
+						<div class="container-content flex flex-wrap gap-20 relative py-20">
+							<div class="card-4" data-aos="fade" data-aos-easing="ease-out" data-aos-delay="300">
+								<div class="card-body">
+									<h2 class="card-title justify-center text-5xl">Card title!</h2>
+									<div class="font-normal text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus impedit, exercitationem nobis esse expedita velit ab nemo, aperiam tempore dolorem rem itaque unde at rerum enim saepe architecto praesentium! Architecto earum repellat nemo illum dolore harum nostrum tempore odit consectetur fugit error sed sit voluptas ab aperiam amet, molestias animi eos labore itaque sequi? Enim doloremque consequatur cum voluptatem explicabo omnis consequuntur velit quas suscipit quae, aspernatur dicta esse, eligendi quia ab, accusamus nulla quod voluptatibus exercitationem eos eius dolores tempora repellendus perspiciatis. Nam maxime sequi, consequatur adipisci aut iusto et natus sunt repudiandae. Ipsum blanditiis quae perspiciatis animi optio!</div>
+									<div class="card-actions justify-center pt-10">
+										<button class="btn btn-wide dark:btn-accent btn-primary text-base-100">Buy Now</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer class="footer transition-all bg-neutral-900 dark:bg-neutral-300 text-base-100">
+					<div class="container p-5 mx-auto flex sm:justify-between items-center justify-center max-sm:flex-col">
+						<div class="flex gap-1">
+							<a aria-label="Youtube" target="_blank" href="https://www.youtube.com/@syukronekoprasetyo6921" class="btn btn-ghost btn-circle"
+								><span><span class="text-xl icon-[mdi--youtube]"></span></span
+							></a>
+							<a aria-label="Twitter" target="_blank" href="https://twitter.com/ekoe66" class="btn btn-ghost btn-circle"
+								><span><span class="text-xl icon-[mdi--twitter]"></span></span
+							></a>
+							<a aria-label="Instagram" target="_blank" href="https://www.instagram.com/syukron_eko_p" class="btn btn-ghost btn-circle"
+								><span><span class="text-xl icon-[ri--instagram-fill]"></span></span
+							></a>
+							<a aria-label="Linkedin" target="_blank" href="https://www.linkedin.com/in/syukron-eko-prasetyo-bb3b3412b/" class="btn btn-ghost btn-circle"
+								><span><span class="text-xl icon-[mdi--linkedin]"></span></span
+							></a>
+						</div>
+						<div class="sm:text-lg max-sm:font-bold text-end text-wrap flex items-center gap-1"><span class="icon-[ic--baseline-copyright]"></span> 2024 copyright all right reserved</div>
+					</div>
+				</footer>
+			</div>
+			<!-- Sidebar -->
+			<div class="drawer-side z-[999]">
+				<label for="sidebar-nav" aria-label="close sidebar" class="drawer-overlay"></label>
+				<ul class="flex flex-col gap-2 p-8 w-80 max-w-full min-h-full bg-base-100 shadow-lg">
+					<li class="divider mb-0 mt-9 opacity-0"></li>
+				</ul>
+			</div>
+		</div>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+					"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+				}
+			}
+		</script>
+
+		<script type="module" src="./assets/3d.js"></script>
+
+		<script src="./assets/aos.js"></script>
+		<script src="./assets/splitting.min.js"></script>
+		<script src="./assets/theme.js"></script>
+		<script src="./assets/splide.min.js"></script>
+		<script src="./assets/marquee.js"></script>
+		<script src="./assets/script.js"></script>
+	</body>
+</html>
