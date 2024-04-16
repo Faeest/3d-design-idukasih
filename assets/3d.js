@@ -8,7 +8,6 @@ import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 
-let mixer;
 
 const clock = new THREE.Clock();
 const container = document.getElementById("3d-container");
@@ -34,14 +33,12 @@ container.appendChild(renderer.domElement);
 const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
 const scene = new THREE.Scene();
-// scene.background = new THREE.Color(0xbfe3dd);
 scene.environment = pmremGenerator.fromScene(new RoomEnvironment(renderer), 0.04).texture;
 
 const camera = new THREE.PerspectiveCamera(50, getDimension("x") / getDimension("y"));
 camera.position.set(1.5, 1.5, 1.5);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.target.set(0, 0.5, 0);
 controls.update();
 controls.autoRotate = true;
 controls.enablePan = false;
@@ -56,13 +53,11 @@ loader.load(
 	"assets/crate_box/scene.gltf",
 	function (gltf) {
 		const model = gltf.scene;
-		// model.position.set(1, 1, 0);
 		model.scale.set(0.015, 0.015, 0.015);
+		model.up.set(0,0,0)
+		model.position.set(0,-0.5,0)
+		model.name = "theModel";
 		scene.add(model);
-
-		mixer = new THREE.AnimationMixer(model);
-		// mixer.clipAction(gltf.animations[0]).play();
-
 		animate();
 	},
 	undefined,
@@ -83,12 +78,7 @@ function animate() {
 		document.querySelectorAll("*").forEach((e) => (e.style.outline = "grey 1px solid"));
 	}
 	const delta = clock.getDelta();
-
-	mixer.update(delta);
-
 	controls.update();
-
 	if (DEBUG) stats.update();
-
 	renderer.render(scene, camera);
 }

@@ -14,7 +14,6 @@ const SplitAnimation = (prod) => {
 		AOS?.init?.({ anchorPlacement: "top-bottom" });
 		return;
 	}
-	console.log(splitText);
 	splitText[0].words.forEach((e, idx) => {
 		e.classList.add("overflow-hidden", "py-2", "hero-text");
 	});
@@ -25,10 +24,16 @@ const SplitAnimation = (prod) => {
 	});
 	splitText[1].lines.forEach((e, idx) => {
 		e.forEach((ee, idx2) => {
-			console.log(idx, idx2);
 			ee.dataset.aosAnchor = "#beranda";
 			ee.dataset.aos = "fade-blur-up";
 			ee.dataset.aosDelay = 500 + Math.floor(idx * 0.05 * 1000);
+		});
+	});
+	splitText.slice(2).forEach((txt) => {
+		txt.words.forEach((e, idx) => {
+			e.dataset.aos = "fade-blur-up";
+			e.dataset.aosEasing = "ease-out-back";
+			e.style.transitionDelay = idx * 0.05 + "s";
 		});
 	});
 	let frameTime = 0;

@@ -30,11 +30,11 @@ function main() {
 				return cb();
 			});
 		},
-		(cb) => {
-			exec(`python3 html_classes_obfuscator.py --htmlpath="./build/*.html" --csspath="./build/**/*.css" --jspath="./build/**/*.js"`, (err, std, stderr) => {
-				console.log("Code has been obfuscated!");
-				return cb();
-			});
-		},
+		// (cb) => {
+		// 	exec(`python3 html_classes_obfuscator.py --htmlpath="./build/*.html" --csspath="./build/**/*.css" --jspath="./build/**/*.js"`, (err, std, stderr) => {
+		// 		console.log("Code has been obfuscated!");
+		// 		return cb();
+		// 	});
+		// },
 	]);
 }
